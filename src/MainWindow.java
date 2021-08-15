@@ -1,12 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.util.ArrayList;
 
 public class MainWindow {
 
+    // Display Variables
     public JFrame mainWindowFrame;
-    public static final Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    public static final Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
+
+    // Encryption Variables
     private String pass;
+
+    // Data Management Variables
+    private ArrayList<Entry> entries;
 
     public MainWindow() {
         mainWindowFrame = new JFrame("Virtual Journal");
@@ -30,7 +36,8 @@ public class MainWindow {
 
         f.setSize(500, 200);
         f.add(p);
-        f.setLocation((int) ((screenSize.getWidth() - f.getWidth()) / 2), (int) ((screenSize.getHeight() - f.getHeight()) / 2));
+        f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        f.setLocation((int) ((SCREEN_SIZE.getWidth() - f.getWidth()) / 2), (int) ((SCREEN_SIZE.getHeight() - f.getHeight()) / 2));
         f.setVisible(true);
 
         return null;
