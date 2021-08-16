@@ -20,7 +20,7 @@ public class Journal {
 
     /**
      * Will save information in a file named with the date and time. Will be saved in a formatted string encrypted by the user's password.
-     * @param savedTime
+     * @param savedTime Time saved at.
      */
     private void save(LocalDateTime savedTime) {
 
